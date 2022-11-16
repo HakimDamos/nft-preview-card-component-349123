@@ -1,0 +1,257 @@
+* {
+    margin: 0;
+    align-items: center;
+    color: #ffffff;
+    font-size: 18px;
+    font-family: 'Outfit', sans-serif;
+}
+
+body {
+    background-color: #0D1A2D;
+}
+
+.container {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    width: 350px;
+    margin-top: 5%;
+
+    border-radius: 16px;
+    background-color: #15273f;
+    max-height: 595px;
+    padding-top: 22px;
+    padding-left: 22px;
+    padding-bottom: 22px;
+    padding-right: 22px;
+}
+
+/* Child 01 Container */
+.image-container {
+    position: relative;
+}
+
+.container .image-container {
+    height: 330px;
+    max-width: 330px;
+    width: 100%;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 13px;
+}
+
+.container .image-container img {
+    height: 100%;
+    width: 100%;
+}
+
+.hover-option {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 330px;
+    width: 330px;
+    opacity: 0;
+    background-color: #0092A1;
+}
+
+/* The icon-clock.svg image */
+.image-container .view{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    display: block;
+    visibility: hidden;
+}
+
+.image-container:hover .hover-option{
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.image-container:hover .hover-option + .view{
+    display: block;
+    visibility: visible;
+    height: 50px;
+    width: 50px;
+}
+
+/* Child 02 Container */
+/* main bottom container */
+
+.container .bottom-container {
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.bottom-container h1 {
+    color: #ffffff;
+    font-family: 'Outfit', san-serif;
+    font-weight: 600;
+    padding-top: 30px;
+    padding-bottom: 10px;
+}
+
+.bottom-container h1:hover {
+    color: #00FFF7;
+    cursor: pointer;
+}
+
+.bottom-container p {
+    color: #8bacda;
+    font-weight: 400;
+    /* padding: 20px; */
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+/* Bottom Section Part 01 */
+.bottom-container .details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.details .ethereum,
+.details .days {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.details .ethereum img, 
+.details .days img {
+    position: relative;
+    bottom: 5px;
+}
+
+.details .ethereum img {
+    height: 18px;
+    width: 11px;
+}
+
+.details .days img {
+    height: 18px;
+    width: 18px;
+}
+
+.details .ethereum .amount,
+.details .days .amount {
+    font-weight: 600;
+    padding-left: 10px;
+}
+
+.ethereum .amount {
+    color: #00FFF7;
+}
+
+.days .amount {
+    color: #8BACD9;
+}
+
+/* 
+  Horizontal Line 
+*/
+
+.bottom-container .horizontal-line {
+    border-bottom: 1px solid #8BACDA;
+}
+
+/*  Creator Section  */
+.bottom-container .creator-details {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 22px;
+}
+
+/*  Creator Image Section  */
+.creator-details .creator-image {
+    height: 48px;
+    width: 48px;
+    border-radius: 100%;
+    border: 1px solid white;
+    margin-left: -82px;
+}
+
+.creator-details .creator-image img {
+    height: 100%;
+    width: 100%;
+}
+
+/*  Creator Heading Section  */
+.creator-details .creator {
+    display: flex;
+    align-items: center;
+}
+
+.creator-details .creator .des{
+    color: #8BACD9;
+    font-weight: 400;
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
+
+.creator-details .creator .creator-name{
+    color: #ffffff;
+    font-weight: 400;
+    padding-left: 5px;
+    padding-bottom: 10px;
+}
+
+.creator-details .creator .creator-name:hover{
+    color: #00FFF7;
+    cursor: pointer;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 160px;
+    font-size: 15px;
+    letter-spacing: 0.1px;
+}
+
+footer a {
+    color: rgb(26, 95, 163);
+    font-size: 15px;
+}
+
+/*
+  ======  Media Query Section  ======
+ */
+
+ /* MOBILE */
+
+ @media screen and ( min-width: 300px ) and ( max-width: 760px ) {
+    .container {
+        width: 300px;
+    }
+
+    .container .image-container {
+        height: 300PX;
+        width: 300px;
+    }
+
+    .image-container img {
+        height: 310px;
+        width: 299px;
+        border-radius: 5px; 
+    }
+
+    .hover-option {
+        height: 300px;
+        width: 299px;
+        border-radius: 5px; 
+    }
+
+    .creator-details .creator-image {
+        margin-left: -35px;
+    }
+ }
